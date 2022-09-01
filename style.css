@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 4fr;
+  grid-template-areas:
+    "sidebar header "
+    "sidebar project ";
+  width: 100vw;
+  height: 100vh;
+  background-color: darkgrey;
+
+}
+
+.header {
+  grid-area: header;
+  background-color: green;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: purple;
+}
+
+.project-area {
+  grid-area: project;
+  background-color: steelblue;
+}
