@@ -1,33 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
-
+  /*border: 1px solid red;*/
+  font-family: 'IBM Plex Sans',
+    sans-serif;
+  ;
 }
 
 .main-container {
   display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 5fr;
   grid-template-areas:
     "sidebar header "
-    "sidebar project ";
+    "sidebar main ";
   width: 100vw;
   height: 100vh;
-  background-color: darkgrey;
+  background-color: black;
 
 }
 
 .header {
   grid-area: header;
-  background-color: green;
+  background-color: white;
 }
 
 .sidebar {
   grid-area: sidebar;
-  background-color: purple;
+  background-color: darkcyan;
 }
 
-.project-area {
-  grid-area: project;
-  background-color: steelblue;
+.main-area {
+  grid-area: main;
+  display: grid;
+  padding: 2%;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 5fr 5fr;
+  grid-template-areas:
+    "projects announcements "
+    "projects trending ";
+  gap: 2%;
+  background-color: lightgray;
+
+
+}
+
+.announcements {
+  grid-area: announcements;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.trending {
+  grid-area: trending;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  background-color: lightgrey;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  height: 35px;
+}
+
+.projects {
+  grid-area: projects;
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-cards {
+  display: grid;
+  height: 95%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2%;
+  padding: 2%;
+}
+
+.p-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  border-radius: 10px;
+  border-left: 10px solid darkcyan;
+  background-color: white;
+
+
+}
+
+.project-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.announcement-cards {
+  height: 95%;
 }
