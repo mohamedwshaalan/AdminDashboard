@@ -16,8 +16,8 @@
   grid-template-areas:
     "sidebar header "
     "sidebar main ";
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   background-color: black;
 
 }
@@ -45,14 +45,6 @@
   background-color: lightgray;
 
 
-}
-
-
-.trending {
-  grid-area: trending;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
 }
 
 .title {
@@ -87,7 +79,7 @@
   border-radius: 10px;
   border-left: 10px solid darkcyan;
   background-color: white;
-
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -148,15 +140,16 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  gap: 1%;
+  gap: 2%;
+
 }
 
 .a-card {
   background-color: white;
   border-radius: 5px;
-  border-bottom: 1px solid lightgray;
   padding: 3%;
   border-left: 5px solid orange;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
 .announcement-title {
@@ -168,4 +161,51 @@
 .announcement-description {
   font-size: 0.9rem;
   padding: 1%;
+}
+
+.trending {
+  grid-area: trending;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.trending-cards {
+  background-color: lightgray;
+  height: 95%;
+  padding: 5%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 1%;
+}
+
+.t-card {
+  background-color: white;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border-bottom: 3px solid aqua;
+
+}
+
+.trending-pic {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trending-info {
+  width: 70%;
+}
+
+.avatarimg {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
