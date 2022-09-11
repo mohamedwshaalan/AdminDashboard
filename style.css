@@ -22,10 +22,7 @@
 
 
 
-.sidebar {
-  grid-area: sidebar;
-  background-color: darkcyan;
-}
+
 
 .main-area {
   grid-area: main;
@@ -350,4 +347,84 @@ input:focus {
 
 .bottom-buttons button:active {
   opacity: 1.0;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: darkcyan;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sidebar-logo {
+
+  height: 10%;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.sidebar-logo img {
+  width: 20%;
+  filter: invert(1.0);
+}
+
+.sidebar-buttons {
+
+  height: 40%;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+.sidebar-button {
+  display: flex;
+  align-items: center;
+  padding-left: 20%;
+  font-size: large;
+  font-weight: bold;
+
+}
+
+.sidebar-button img {
+  width: 15%;
+  filter: invert(1.0);
+  padding-right: 10%;
+}
+
+.sidebar-settings {
+
+  height: 30%;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+.sidebar-setting {
+  display: flex;
+  align-items: center;
+  padding-left: 20%;
+  font-size: large;
+  font-weight: bold;
+}
+
+.sidebar-setting img {
+  width: 15%;
+  filter: invert(1.0);
+  padding-right: 10%;
 }
